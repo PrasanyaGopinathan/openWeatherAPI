@@ -7,8 +7,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"json:target/report.json"},
+        plugin = {"pretty", "html:target/Destination"},
         glue = {"com.rest.test.test.step.definitions"},
         features = {"src/test/java/com.rest.test/resources/features"},
-        tags = {"@open"})
+        tags = {"@openWeatherAPITests"})
 public class cucumberRunnerTest {}
