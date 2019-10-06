@@ -48,7 +48,7 @@ Feature: Test the open weather station API
       | DEMO_TEST001 |
       | DEMO_TEST002 |
 
-  Scenario Outline: Validate all registered stations
+  Scenario Outline: Validate the error response when delete request is sent for already deleted stations.
     Given I provide the header with Content-Type as application/json
     When I submit the DELETE request with ID for the <stations>
     Then the response status code is 404
